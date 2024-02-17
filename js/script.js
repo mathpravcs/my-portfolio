@@ -4,15 +4,25 @@ window.addEventListener("scroll",function(){
 header.classList.toggle("sticky",window.scrollY>120);
 });
 
-let menu = document.querySelector('#menu-icon');
-let navList = document.querySelector('.navList');
 
-menu.onclick=() =>{
-    menu.classList.toggle('bx-x');
-    menu.classList.toggle('active');
+var audio = document.getElementById('myAudio');
+
+function toggleAudio() {
+  if (audio.paused) {
+    playAudio();
+  } else {
+    pauseAudio();
+  }
 }
 
-window.onscroll= () => {
-    menu.classList.remove('bx-x');
-    menu.classList.remove('active');
+function playAudio() {
+  audio.play();
 }
+
+function pauseAudio() {
+  audio.pause();
+}
+
+
+   
+

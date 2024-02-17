@@ -520,8 +520,9 @@ form .send-btn:hover{
         padding: 17px;
         font-size: 22px;
     }
-    .navList :active{
-        right: 0;
+    .navList.active{
+        right: 
+        0;
     }
 }
 
@@ -545,5 +546,21 @@ form .send-btn:hover{
         object-fit: cover;
         margin: 0 auto;
     }
+    
+}
+
+@media screen and (max-width: 556px) {
+  #menu-icon {
+    display: none;
+  }
+
+  .navList {
+    /* Estilos específicos para a lista de navegação em telas menores */
+    display: none; /* Esconda a lista de navegação por padrão em telas menores */
+  }
+
+  #menu-icon.bx-x + .navList.active {
+    display: block; /* Mostre a lista de navegação quando o ícone do menu tem a classe 'bx-x' e a lista de navegação tem a classe 'active' */
+  }
 }
 
